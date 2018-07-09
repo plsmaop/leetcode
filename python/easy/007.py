@@ -8,4 +8,4 @@ class Solution:
         if x < 0:
             ans = int('-' + str(x)[1::][::-1])
         else:   ans = int(str(x)[::-1])
-        return ans if  -(2<<30) < ans < 2<<31 - 1 else 0
+        return ans if  -(1<<31) < ans < (1<<31) - 1 else 0
