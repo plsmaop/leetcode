@@ -1,14 +1,17 @@
 class Solution:
-    def transpose(self, A):
+    def binaryGap(self, N):
         """
-        :type A: List[List[int]]
-        :rtype: List[List[int]]
+        :type N: int
+        :rtype: int
         """
-        ans = []
-        for j in A[0]:
-            ans.append([])
-        for i in range(len(A)):
-            for j in range(len(A[i])):
-                ans[j].append(A[i][j])
-            
+        S = '{0:b}'.format(N)
+        start, ans = -1, 0
+        for i in range(len(S)):
+            if S[i] == '1':
+                if start == -1:
+                    start = i
+                else:
+                    ans = i - start if (i -start) > ans else ans
+                    start = i
         return ans
+                
