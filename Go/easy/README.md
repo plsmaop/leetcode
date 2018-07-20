@@ -19,6 +19,6 @@ func removeElements(head *ListNode, val int) *ListNode {
 }
 ```
 * The variable, `pointer`, is a pointer which points to the pointer of `ListNode`, so `*pointer` is the pointer of `ListNode`.
-* Once `val` is equal to `(*pointer).Val`, the code will change the value of `(*pointer)`, making  `(*pointer)` point to `(*pointer).Next`. That is, the `ListNode` `*pointer` used to point is no longer being pointed
+* Once `val` is equal to current `(*pointer).Val`, the code will change the value of `(*pointer)`, making  `(*pointer)` point to `(*pointer).Next`. That is, the current `ListNode` `*pointer` used to point is no longer being pointed
 .
 * Otherwise, the pointer of pointer, `pointer`, will point to the pointer of the next node of `*pointer`
